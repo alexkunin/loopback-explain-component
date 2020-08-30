@@ -1,6 +1,6 @@
 {
   "name": "@explain-component-internals/ui-client",
-  "version": "0.0.0-canary-1",
+  "version": "0.0.0",
   "files": [
     "dist",
     "index.js"
