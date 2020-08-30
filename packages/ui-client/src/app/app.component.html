@@ -1,0 +1,36 @@
+<mat-sidenav-container *ngIf="data$ | async as data">
+  <mat-sidenav #sidenav mode="over" position="end">
+    <mat-toolbar fxLayout="row">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>close</mat-icon>
+      </button>
+      <span fxFlex="grow">Entries</span>
+      <button mat-icon-button (click)="refresh()">
+        <mat-icon>refresh</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <mat-selection-list #list [multiple]="false" [ngModel]="($any(data).v | keyvalue)[0]">
+      <mat-list-option *ngFor="let entry of $any(data).v | keyvalue" [value]="entry">
+        <div mat-line>{{ entry.value.v.method.v }} {{ entry.value.v.url.v }}</div>
+        <div mat-line>
+          <div style="float: right;">{{ entry.key }}</div>
+          {{ entry.value.v.timestamp.v | date: 'hh:mm:ss' }}
+        </div>
+      </mat-list-option>
+    </mat-selection-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar fxLayout="row">
+      <span fxFlex="grow">Log</span>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <app-subtree
+      [data]="list.selectedOptions.selected[0]?.value.value"
+      [selector]="list.selectedOptions.selected[0]?.value.key"
+    ></app-subtree>
+  </mat-sidenav-content>
+</mat-sidenav-container>

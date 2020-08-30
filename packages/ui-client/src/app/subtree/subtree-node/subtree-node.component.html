@@ -1,0 +1,28 @@
+<ng-container [ngSwitch]="data?.$">
+  <div *ngSwitchCase="'undefined'" class="undefined">undefined</div>
+  <div *ngSwitchCase="'null'" class="null">null</div>
+  <div *ngSwitchCase="'boolean'" class="boolean">{{ data.v | json }}</div>
+  <div *ngSwitchCase="'number'" class="number">{{ data.v | json }}</div>
+  <div *ngSwitchCase="'string'" class="string">{{ data.v | json }}</div>
+  <div *ngSwitchCase="'object'" class="object" [class.expanded]="collapsed === false">
+    <div class="load-button" *ngIf="data.v === undefined; else object" (click)="load()"></div>
+    <ng-template #object>
+      <div *ngIf="(data.v | keyvalue).length > 0" class="toggle-button" (click)="collapsed = !collapsed"></div>
+      <div class="element" *ngFor="let pair of data.v | keyvalue">
+        <div class="key">{{ pair.key }}</div>
+        <div class="value"><app-subtree-node [data]="pair.value" [selector]="(selector === null ? '' : selector + '.') + pair.key"></app-subtree-node></div>
+      </div>
+    </ng-template>
+  </div>
+  <div *ngSwitchCase="'array'" class="array" [class.expanded]="collapsed === false">
+    <div class="load-button" *ngIf="data.v === undefined; else array" (click)="load()"></div>
+    <ng-template #array>
+      <div *ngIf="data.v.length > 0"  class="toggle-button" (click)="collapsed = !collapsed"></div>
+      <div class="element" *ngFor="let value of data.v; index as index">
+        <div class="key">{{ index }}</div>
+        <div class="value"><app-subtree-node [data]="$any(value)" [selector]="(selector === null ? '' : selector + '.') + index"></app-subtree-node></div>
+      </div>
+    </ng-template>
+  </div>
+  <div *ngSwitchCase="'function'" class="function">{{ data.v === null ? '&lt;Anonymous&gt;' : data.v }}</div>
+</ng-container>

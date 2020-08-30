@@ -1,0 +1,109 @@
+:host {
+  font: 12px Monaco, Menlo, Consolas, "Courier New", monospace;
+  white-space: pre;
+}
+
+.boolean, .null, .undefined {
+  color: orange;
+}
+
+.number {
+  color: blue;
+}
+
+.string {
+  color: green;
+}
+
+.object {
+  &:before {
+    content: '{';
+    color: black;
+  }
+
+  &:after {
+    content: '}';
+    color: black;
+  }
+}
+
+.array {
+  &:before {
+    content: '[';
+    color: black;
+  }
+
+  &:after {
+    content: ']';
+    color: black;
+  }
+}
+
+.function {
+  color: orange;
+
+  &:before {
+    content: 'function ';
+    color: gray;
+  }
+
+  &:after {
+    content: '() { ... }';
+    color: gray;
+  }
+}
+
+.element {
+  padding-left: 2ex;
+  display: none;
+
+  > .key {
+    color: magenta;
+    float: left;
+    padding-right: 1ex;
+
+    &:after {
+      content: ':';
+      color: orange;
+    }
+  }
+}
+
+.array > .element > .key {
+  display: none;
+}
+
+.expanded > .element {
+  display: block;
+}
+
+.load-button {
+  display: inline-block;
+  padding: 0 1ex;
+  color: gray;
+  cursor: pointer;
+
+  &:before {
+    content: '△';
+    display: inline-block;
+    transform: rotate(90deg);
+  }
+}
+
+.toggle-button {
+  display: inline-block;
+  padding: 0 1ex;
+  color: green;
+  cursor: pointer;
+
+  &:before {
+    content: '▼';
+    display: inline-block;
+    transform: rotate(-90deg);
+  }
+}
+
+.expanded > .toggle-button:before {
+  content: '▼';
+  transform: rotate(0);
+}
