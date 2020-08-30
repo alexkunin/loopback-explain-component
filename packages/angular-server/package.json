@@ -1,6 +1,9 @@
 {
     "name": "@explain-component-internals/angular-server",
     "version": "0.0.1",
+    "devDependencies": {
+        "express": "^4"
+    },
     "peerDependencies": {
         "express": "^4"
     }

@@ -3,7 +3,11 @@
     "version": "0.0.1",
     "dependencies": {
         "@explain-component-internals/angular-server": "^0.0.1",
-        "@explain-component-internals/ui-client": "^0.0.1"
+        "@explain-component-internals/ui-client": "^0.0.1",
+        "uuid": "^8.3.0"
+    },
+    "devDependencies": {
+        "express": "^4"
     },
     "peerDependencies": {
         "express": "^4"

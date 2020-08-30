@@ -1,5 +1,5 @@
 const globalDebug = require('debug');
-const uuid = require('uuid/v4');
+const {v4: uuid} = require('uuid');
 const {entries, Entry} = require('./log');
 
 const debug = globalDebug('explain-component:main:hooks');
