@@ -1,6 +1,5 @@
 {
     "name": "@explain-component-internals/main",
-    "private": true,
     "dependencies": {
         "@explain-component-internals/angular-server": "^0.0.0",
         "@explain-component-internals/ui-client": "^0.0.0",
