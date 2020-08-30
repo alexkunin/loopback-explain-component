@@ -1,5 +1,6 @@
 {
     "name": "@explain-component-internals/main",
+    "version": "0.0.0",
     "dependencies": {
         "@explain-component-internals/angular-server": "^0.0.0-alpha.0",
         "@explain-component-internals/ui-client": "^0.0.0-alpha.0",
