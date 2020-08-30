@@ -1,8 +1,22 @@
 {
-  "name": "root",
-  "private": true,
+  "name": "loopback-explain-component",
+  "version": "0.0.0-canary-0",
   "main": "packages/main",
   "devDependencies": {
     "lerna": "^3.22.1"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexkunin/loopback-explain-component.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexkunin/loopback-explain-component/issues"
+  },
+  "homepage": "https://github.com/alexkunin/loopback-explain-component#readme",
+  "description": ""
 }
