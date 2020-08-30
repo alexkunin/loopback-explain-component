@@ -1,5 +1,5 @@
 {
-  "name": "loopback-explain-component",
+  "name": "@alexkunin/loopback-explain-component",
   "version": "0.0.0-canary-0",
   "main": "packages/main",
   "devDependencies": {
