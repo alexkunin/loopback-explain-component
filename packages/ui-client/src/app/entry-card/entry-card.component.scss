@@ -1,0 +1,18 @@
+.log-entries {
+  .log-entry {
+    padding-top: 2ex;
+    font: 12px Monaco, Menlo, Consolas, "Courier New", monospace;
+    white-space: pre-wrap;
+
+    .format {
+    }
+
+    .args {
+      padding-left: 4ex;
+
+      .arg {
+        padding-top: 1ex;
+      }
+    }
+  }
+}

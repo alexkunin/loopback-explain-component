@@ -1,0 +1,15 @@
+<app-subtree
+  [data]="data"
+  [selector]="selector"
+></app-subtree>
+
+<div class="log-entries">
+  <div class="log-entry" *ngFor="let logEntry of logEntries; index as index">
+    <div class="format" [innerHTML]="logEntry.format"></div>
+    <div class="args">
+      <div class="arg" *ngFor="let arg of logEntry.args; index as j">
+        <app-subtree-node [data]="arg" [selector]="selector + '.log.'+index+'.'+ (1 + j)"></app-subtree-node>
+      </div>
+    </div>
+  </div>
+</div>

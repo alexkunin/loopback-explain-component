@@ -15,12 +15,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppComponent} from './app.component';
 import { SubtreeComponent } from './subtree/subtree.component';
 import { SubtreeNodeComponent } from './subtree/subtree-node/subtree-node.component';
+import { EntryCardComponent } from './entry-card/entry-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SubtreeComponent,
     SubtreeNodeComponent,
+    EntryCardComponent,
   ],
   imports: [
     BrowserModule,
