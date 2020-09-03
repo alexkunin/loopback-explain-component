@@ -1,8 +1,14 @@
 {
     "name": "@explain-component-internals/angular-server",
     "version": "0.0.3",
+    "scripts": {
+        "test": "jasmine --config=jasmine.json"
+    },
     "devDependencies": {
-        "express": "^4"
+        "express": "^4",
+        "jasmine": "^3.6.1",
+        "jasmine-core": "^3.6.0",
+        "supertest": "^4.0.2"
     },
     "peerDependencies": {
         "express": "^4"
