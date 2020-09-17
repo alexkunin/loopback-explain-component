@@ -2,6 +2,7 @@ const {webRoot} = require('@explain-component-internals/ui-client');
 const angularServer = require('@explain-component-internals/angular-server');
 const hooks = require('./hooks');
 const api = require('./api');
+const {URL} = require('universal-url');
 
 module.exports = (app, options = {}) => {
     const resolvedOptions = options;
