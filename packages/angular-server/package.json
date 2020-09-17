@@ -1,6 +1,6 @@
 {
     "name": "@explain-component-internals/angular-server",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "scripts": {
         "test": "jasmine --config=jasmine.json"
     },
