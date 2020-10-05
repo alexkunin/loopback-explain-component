@@ -1,9 +1,9 @@
 {
     "name": "@explain-component-internals/main",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "dependencies": {
-        "@explain-component-internals/angular-server": "^0.0.6",
-        "@explain-component-internals/ui-client": "^0.0.6",
+        "@explain-component-internals/angular-server": "^0.0.7",
+        "@explain-component-internals/ui-client": "^0.0.7",
         "universal-url": "^2.0.0",
         "uuid": "^8.3.0"
     },
